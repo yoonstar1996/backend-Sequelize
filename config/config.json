@@ -1,0 +1,17 @@
+{
+    "development" : {
+        "host": "localhost",
+        "database": "kdt_test",
+        "username": "user",
+        "password": "qwer1234!!",
+        "dialect": "mysql"
+    },
+    "product": {
+        "host": "49.50.172.245",
+        "database": "kdt_test",
+        "username": "user",
+        "password": "qwer1234!!",
+        "dialect": "mysql"
+
+    }
+}
