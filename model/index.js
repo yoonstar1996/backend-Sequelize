@@ -20,5 +20,17 @@ const sequelize = new Sequelize(
 db.sequelize - sequelize;
 db.Sequelize = Sequelize;
 db.Visitor = require("./Visitor")( sequelize, Sequelize);
+db.Payment = require("./Payment")( sequelize, Sequelize);
+
+db.Visitor.hasMany(db.Payment, {
+    foreingKey: "user.ID",
+    sourceKey: "id",
+    onDelete: "cascade"
+});
+db.Payment.belongsTo(db.Visitor, {
+    foreingKey: "user.ID",
+    sourceKey: "id",
+    onDelete: "cascade"
+});
 
 module.exports = db;
